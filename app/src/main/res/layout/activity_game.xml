@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.example.christofferpiilmann.galgeleg.game">
+
+    <ImageView
+        android:id="@+id/galgeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/galge" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnq"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Q"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnw"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="W"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btne"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="E"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnr"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="R"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnt"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="T"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btny"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Y"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnu"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="U"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btni"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="I"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btno"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="O"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnp"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="P"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnå"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Å"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btna"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="A"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btns"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="S"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnd"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="D"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnf"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="F"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btng"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="G"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnh"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="H"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnj"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="J"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnk"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="K"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnl"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="L"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnæ"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Æ"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnø"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Ø"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnz"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Z"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnx"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="X"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnc"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="C"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnv"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="V"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnb"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="B"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnn"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="N"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Button
+                android:id="@+id/btnm"
+                android:layout_width="33dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="M"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="237dp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/synligOrd"
+        android:layout_width="329dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="-8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="17dp"
+        android:text="synligOrd"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toLeftOf="@+id/galgeImg"
+        app:layout_constraintTop_toBottomOf="@+id/galgeImg" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Henter nye ord fra dr.dk..."
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        app:layout_constraintEnd_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/progressBar" />
+
+
+</android.support.constraint.ConstraintLayout>

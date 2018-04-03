@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "955422664333",
+    "firebase_url": "https://galgeleg-16fd1.firebaseio.com",
+    "project_id": "galgeleg-16fd1",
+    "storage_bucket": "galgeleg-16fd1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955422664333:android:401b80b45f402518",
+        "android_client_info": {
+          "package_name": "com.example.christofferpiilmann.galgeleg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955422664333-g4jkrrn4m902dpsl26hglggjq92hrdsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdWFOxd-W68Dgm9G2BqndAe7gLKzc6w9Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

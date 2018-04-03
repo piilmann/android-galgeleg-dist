@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">s143781 Galgeleg</string>
+    <string name="dialog_message">Spillet er slut</string>
+    <string name="loss">Du gættede ikke ordet.</string>
+    <string name="win">Tillykke du gættede ordet!</string>
+    <string name="dialog_title">Spillet er slut</string>
+    <string name="newgame">Start nyt spil</string>
+    <string name="highscore">Highscore listen</string>
+    <string name="help">Hvad skal jeg gøre?</string>
+    <string name="cancel">Afslut</string>
+    <string name="words">Vælg hvilket ord der skal gættes:</string>
+</resources>

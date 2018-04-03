@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent" android:background="@drawable/bg2"
+    >
+<TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:id="@+id/label" android:text="@string/highscore" android:layout_width="fill_parent" android:gravity="center_horizontal" android:textStyle="bold"  android:textSize="40px"></TextView>
+
+    <ListView
+        android:id="@+id/highscorelist"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
