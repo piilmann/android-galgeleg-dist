@@ -1,11 +1,13 @@
 package com.example.christofferpiilmann.galgeleg;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -16,7 +18,7 @@ import android.widget.TextView;
 
 public class login extends AppCompatActivity implements View.OnClickListener {
 
-    TextView user, pass;
+    EditText user, pass;
     Button login;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +32,16 @@ public class login extends AppCompatActivity implements View.OnClickListener {
 
         // Resources
 
-        user = (TextView) findViewById(R.id.user);
-        pass = (TextView) findViewById(R.id.pass);
-       
+        user = (EditText) findViewById(R.id.user);
+        pass = (EditText) findViewById(R.id.pass);
+
 
 }
 
     @Override
     public void onClick(View view) {
-
+        if (view == login) {
+          
+        }
     }
 }
