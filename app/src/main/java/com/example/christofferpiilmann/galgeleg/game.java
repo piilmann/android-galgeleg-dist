@@ -1,40 +1,39 @@
 package com.example.christofferpiilmann.galgeleg;
 
-import android.*;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class game extends AppCompatActivity implements OnClickListener {
 
     TextView synligOrd, statusText;
-    galgeLogik logik = new galgeLogik();
+    galgeDistLogik logik = new galgeDistLogik();
     Button btna, btnb, btnc, btnd, btne, btnf, btng, btnh, btni, btnj, btnk, btnl, btnm, btnn, btno, btnp, btnq, btnr, btns, btnt, btnu, btnv, btnw, btnx, btny, btnz, btnæ, btnø, btnå;
     ImageView galgeImg;
     Button[] btnlist = new Button[]{btna, btnb, btnc, btnd, btne, btnf, btng, btnh, btni, btnj, btnk, btnl, btnm, btnn, btno, btnp, btnq, btnr, btns, btnt, btnu, btnv, btnw, btnx, btny, btnz, btnæ, btnø, btnå};
@@ -44,6 +43,8 @@ public class game extends AppCompatActivity implements OnClickListener {
     SharedPreferences prefs;
     char[] alfabet = "abcdefghijklmnopqrstuvwxyzæøå".toCharArray();
     final Context mContext = this;
+    public static final MediaType JSON
+            = MediaType.parse("application/json; charset=utf-8");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,10 +77,9 @@ public class game extends AppCompatActivity implements OnClickListener {
         mpLose = MediaPlayer.create(this, R.raw.lose);
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-
         if (savedInstanceState == null) {
             // Nyt spil init
-            hentOrdFraDR();
+            logik.hentOrdFraDR(); //done
             logik.nulstil();
             setAllButtonsBlack();
             synligOrd.setText(logik.getSynligtOrd());
@@ -91,7 +91,7 @@ public class game extends AppCompatActivity implements OnClickListener {
             ArrayList<String> mBrugteBogstaver = savedInstanceState.getStringArrayList("BRUGTEBOGSTAVER");
             String mOrdet = savedInstanceState.getString("ORDET");
             int mForkerteBogstaver = savedInstanceState.getInt("ANTALFORKERTE");
-            logik.indlæsSpil(mBrugteBogstaver,mForkerteBogstaver,mOrdet);
+            //logik.indlæsSpil(mBrugteBogstaver,mForkerteBogstaver,mOrdet);
 
             synligOrd.setText(logik.getSynligtOrd());
             opdaterGalgeImg();
@@ -99,6 +99,8 @@ public class game extends AppCompatActivity implements OnClickListener {
             progressBar.setVisibility(View.INVISIBLE);
         }
     }
+
+
 
 
     public void gætBogstav(String input){
@@ -115,31 +117,6 @@ public class game extends AppCompatActivity implements OnClickListener {
                 alertDialog.show();
             }
         }
-
-    }
-
-    private void hentOrdFraDR(){
-
-        new AsyncTask() {
-            @Override
-            protected Object doInBackground(Object... arg0) {
-                try {
-                    logik.hentOrdFraDr();
-                    return "Ordene blev korrekt hentet fra DR's server";
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    return "Ordene blev ikke hentet korrekt: "+e;
-                }
-            }
-
-            @Override
-            protected void onPostExecute(Object resultat) {
-                System.out.println("resultat: \n" + resultat);
-                statusText.setVisibility(View.INVISIBLE);
-                progressBar.setVisibility(View.INVISIBLE);
-            }
-        }.execute();
 
     }
 
@@ -174,6 +151,7 @@ public class game extends AppCompatActivity implements OnClickListener {
         btnø.setTextColor(Color.BLACK);
         btnå.setTextColor(Color.BLACK);
     }
+
 
     private void dialogInit(){
         //Gameover dialog
@@ -275,7 +253,7 @@ public class game extends AppCompatActivity implements OnClickListener {
         // Save the user's current game state
         savedInstanceState.putInt("ANTALFORKERTE", logik.getAntalForkerteBogstaver());
         savedInstanceState.putString("ORDET", logik.getOrdet());
-        savedInstanceState.putStringArrayList("BRUGTEBOGSTAVER",logik.getBrugteBogstaver());
+        //savedInstanceState.putStringArrayList("BRUGTEBOGSTAVER",logik.getBrugteBogstaver());
 
 
         // Always call the superclass so it can save the view hierarchy state
